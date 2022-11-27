@@ -23,4 +23,6 @@ public class GreetingsEntity {
   @NotBlank 
   String caption;
 
+public void setMessage(String message) {}
+
 }
