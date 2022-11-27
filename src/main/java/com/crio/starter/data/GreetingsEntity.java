@@ -1,16 +1,26 @@
 package com.crio.starter.data;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import javax.validation.constraints.NotBlank;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@Document(collection = "greetings")
-@NoArgsConstructor
-public class GreetingsEntity {
 
-  private String extId;
+@Data 
+@Document(collection = "memes") 
 
-  private String message;
+public class GreetingsEntity { 
+
+  @Id   
+  String id;
+
+  @NotBlank 
+  String name;
+
+  @NotBlank 
+  String url;
+
+  @NotBlank 
+  String caption;
 
 }
